@@ -101,7 +101,7 @@ nav li:hover {
 }
 
 /* Section styles */
-#resume, #skills, #portfolio, #contact, #summary {
+#resume, #skills, #portfolio, #contact, #summary{
     padding: 15px 20px;
     margin: 0;
     min-height: 50vh;
@@ -110,7 +110,7 @@ nav li:hover {
     font-size: 140%;
 }
 
-#resume:hover, #skills:hover, #portfolio:hover, #summary:hover {
+#resume:hover, #skills:hover, #portfolio:hover, #summary:hover ,.project:hover { 
     color: #fff;
     background-color: #303030;
     border-radius: 0px;
@@ -137,16 +137,17 @@ nav li:hover {
 }
 
 /* Summary section */
-#summary {
+#summary{
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+    color: #000;
 }
 
-.text {
+.text1 {
     width: 100%;
     padding: 0 20px;
     line-height: 40px;
@@ -369,6 +370,141 @@ footer {
     }
 }
 
+
+/* projects */
+#projects{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+    color: #fff;
+    background-color: #303030;
+    padding: 20px 10px;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    grid-template-rows: repeat(100px, minmax(100px, 150px));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    justify-content: center; /* Center items horizontally within columns */
+    align-items: center; /* Center items vertically within rows */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #303030;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  
+  .project{
+    grid-auto-columns: minmax(20px, auto); /* Allow projects to grow/shrink within columns */
+    width: 100%; /* Adjust default project width if needed */
+  
+    transition: 0.3s;
+    background-color: #fff;
+    color: #303030;
+    overflow: hidden;
+    border: none;
+    justify-items: center;
+    transition: 0.5s;
+  }
+.project:hover{
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
+    
+    .text{
+        visibility:visible ;
+    }
+    .pro-pic{
+        filter: blur(0);
+    }
+  
+}
+.project .img{
+    overflow: hidden;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  .project img {
+  width: 100%; /* Or a specific pixel value */
+  height: 100%; /* Maintain aspect ratio */
+  border-radius: 15px 15px 0 0; /* Adjust the border radius as needed */
+  transition: 0.5s;
+  border: none;
+  filter: blur(3px);
+}
+
+  .project .icon {
+    display: none   ;
+  }
+.project .pro-pic:hover{
+    transform: scale(1.2);
+    overflow: hidden;
+   
+    transition: all 0.5s;
+  }
+.text{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    transition: 0.3s;
+    visibility: hidden;
+}
+.text p,.text h3{
+    font-size: 0.7em ;
+    font-weight: 500;        
+}
+  .project .code{
+    padding: 15px 30px;
+    margin: 10px auto;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(77, 189, 43);
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 700;
+    
+  }
+    .project .code:hover{
+        background-color: #ffffff;
+        color: #303030;
+        border-radius: 15px;
+        transition: 0.3s;
+        transform: scale(1.2);
+    }
+    #me{
+        padding: 0;
+        
+    }
+    #me .img{
+        grid-row: 1;
+        width: 100%;
+        height: 400px;
+        filter: blur(0);
+        background-image: url(https://avatars.githubusercontent.com/u/150187393?s=400&u=66a8df4c6c57f9fddd3beb49cb249bd0d73e2078&v=4);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    }
+    @media only screen and (max-width: 768px ) and (min-width: 600px ){
+      .projects .text{
+        font-size: 0.6em;
+        position: relative;
+        right: 10px;
+       }
+       #me .img{
+        max-height: 300px;
+       }
+       
+    }
+    
+  
 /* Media Query for screens with a maximum width of 600 pixels */
 @media only screen and (max-width: 600px) {
     * { 
@@ -376,6 +512,11 @@ footer {
         font-size: 0.9em;   
         padding: 5% 10%; 
         font-weight: 800;
+    }
+    .name{
+        overflow: hidden;
+        border-right: 2px solid; /* Add a border for the blinking cursor effect */
+        font-size: 26px !important; /* Adjust the font size as needed */
     }
 
     nav {
@@ -393,12 +534,6 @@ footer {
         z-index: 1;
     }
 
-     .name{
-        overflow: hidden;
-        border-right: 2px solid; /* Add a border for the blinking cursor effect */
-        font-size: 26px !important; /* Adjust the font size as needed */
-    }
-    
     h2 {
         font-size: 2em;
     }
@@ -537,4 +672,53 @@ footer p{
         min-width: 50px !important;
         width: 100px ;
     }
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        gap: 0;
+        border-radius: 0;
+    }   
+    .project{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+    }
+    .text p,.text h3{
+        font-size: 0.8em ;
+    font-weight: 500;        
+    }
+    .text p{
+        color: wheat;
+    }
+    .project:hover{
+        border-radius: 0;   
+    }
+            .project .img , .project .pro-pic , .project a{
+                border-radius:  0;
+                padding: 0;
+                margin: 0;
+            }
+           
+            .project a{
+                margin: 0;
+                padding: 0;
+                border-radius: 0;            }
+            .text{
+                visibility: visible;
+                padding: 0;
+                margin: 0;
+                background-color: #303030;
+                color: #fff;    
+                border-radius: 0;
+                
+            }
+            #me{
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+            }
+           
 }
