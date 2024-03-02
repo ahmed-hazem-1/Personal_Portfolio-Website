@@ -393,6 +393,12 @@ footer {
         z-index: 1;
     }
 
+     .name{
+        overflow: hidden;
+        border-right: 2px solid; /* Add a border for the blinking cursor effect */
+        font-size: 26px !important; /* Adjust the font size as needed */
+    }
+    
     h2 {
         font-size: 2em;
     }
