@@ -1,0 +1,534 @@
+/* Reset styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+/* Body styles */
+body {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-image: url(./images/scattered-forcefields.svg);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+#nav-bar {
+   display: none;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    width: 100%;
+    padding: 1rem 0rem 0rem;
+}
+
+/* Header styles */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #1f1f1f;
+    color: #fff;
+    width: 95.5%;
+}
+.name {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid; /* Add a border for the blinking cursor effect */
+    font-size: 40px; /* Adjust the font size as needed */
+}
+/* Start section */
+.start {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 200%;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    margin: 5% 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    font-size: 60%;
+    flex-wrap: wrap;
+    transition: 0.5s;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #000000;
+    margin: 5px 15px;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+
+nav ul a:hover {
+    color: #ffffff;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    transform: scale(1.2);
+}
+
+/* Section styles */
+#resume, #skills, #portfolio, #contact, #summary {
+    padding: 15px 20px;
+    margin: 0;
+    min-height: 50vh;
+    height: auto;
+    transition: 0.3s;
+    font-size: 140%;
+}
+
+#resume:hover, #skills:hover, #portfolio:hover, #summary:hover {
+    color: #fff;
+    background-color: #303030;
+    border-radius: 0px;
+}
+
+/* Up button */
+.up {
+    background-image: url(./images/arrow_upward_FILL0_wght400_GRAD0_opsz24.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #fff;
+    padding: 2%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.up:hover {
+    transform: scale(1.2);
+}
+
+/* Summary section */
+#summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.text {
+    width: 100%;
+    padding: 0 20px;
+    line-height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+#summary .me {
+    text-align: left;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Skills list */
+#skills li {
+    list-style-type: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#skills li::before {
+    content: '\2605'; /* Unicode character for a star */
+    color: gold; /* Set the color of the star */
+    font-size: 0.8em; /* Adjust the size of the star */
+    margin-right: 5px; /* Adjust the spacing between the star and text */
+    position: absolute;
+    left: -20px;
+}
+
+/* Portfolio section */
+#portfolio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Resume section */
+#resume {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Download PDF button */
+#downloadPdf {
+    padding: 20px 40px;
+    margin: 0;
+    transition: 0.3s;
+    font-size: 70%;
+    color: #fff;
+    background-color: #303030;
+    border-radius: 25px;
+    max-width: 250px;
+}
+
+#downloadPdf:hover {
+    color: #000;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+/* Contact section */
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 50vh;
+    background-color: #303030;
+    color: white;
+}
+
+#contact form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    padding: 10px 20px;
+    margin: 30px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    height: 100%;
+}
+
+.contact label {
+    position: relative;
+    min-width: 100px;
+    width: 50%;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+}
+
+#contact textarea {
+    position: relative;
+    padding: 10px 20px;
+    min-height: 15px;
+    max-height: 15px;
+    min-width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: none;
+}
+
+#contact form input {
+    position: relative;
+    padding: 10px 20px;
+    margin: 5px 0;
+    max-width: 30%;
+    border-radius: 15px;
+    border: none;
+    min-height: 15px;
+    max-height: 15px;
+    max-width: 150px;
+}
+
+#contact .sec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    height: 50px;
+}
+
+#contact .send {
+    padding: 10px 40px;
+    margin: 10px 0;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    color: #303030;
+    transition: 0.3s;
+    cursor: pointer;
+    max-height: fit-content;
+    font-size: 1rem;
+}
+
+#contact .send:hover {
+    background-color: #303030;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.2);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Social media icons */
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 30px;
+    width: 50%;
+    font-size: 200%;
+    border-left: 1px solid white;
+    transition: all 0.5s ease-in-out;
+}
+
+.social img {
+    width: 50px;
+    margin: 10px;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+    transition: 0.3s;   
+}
+
+/* Footer styles */
+footer {
+    width: 95.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 2rem;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+#nav-bar {
+    overflow: hidden;
+    width: 0;
+    transition: 0.5s; /* Adjust the transition duration */
+}
+
+#menu-icon {
+    cursor: pointer;
+    display: none; /* Initially hide the menu icon on wider screens */
+}
+
+@media only screen and (max-width: 600px) {
+    #menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+    }
+
+    #nav-list {
+        display: none; /* Initially hide the navigation list on smaller screens */
+    }
+}
+
+/* Media Query for screens with a maximum width of 600 pixels */
+@media only screen and (max-width: 600px) {
+    * { 
+        position: relative;
+        font-size: 0.9em;   
+        padding: 5% 10%; 
+        font-weight: 800;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 30px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    #name {
+        font-size: 8vw;
+        font-weight: 900;
+    }
+
+    .start p {
+        font-size: 5vw;
+    }
+
+    .start {
+        align-content: space-around;
+        height: 50vh;
+    }
+
+    html{
+        width: 100%;
+        height: 100%;    
+        position: relative;
+    }
+    body {
+        width: 100vw;
+        height: auto;    
+        position: relative;
+    }
+
+    #contact, #social, footer, header{
+       display: flex;
+         flex-direction: column;
+         height: auto;
+         text-align: left;
+    }
+    #contact{
+        height: auto    ;
+    }
+    .sec{
+        height: auto;
+        padding: 0;
+    }
+    label{
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+header{
+    padding: 10px;
+    margin: 0;
+    width: 94.7vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: #fff;
+    position: relative;
+    z-index: -1;
+}
+.social{
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.social img{
+    width: 20px;
+    margin: 10px 10px 0;
+}
+ 
+footer {
+    bottom: 0;
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 84.7vw;
+    height: auto;
+}
+footer p{
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+   .social{
+    border-left: none;
+   }
+    section {
+        padding: 5px;
+    }
+
+    .me {
+        max-width: 90%;
+    }
+
+    #nav-list {
+        display: flex; /* Add this line to show the navigation list on smaller screens */
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    #summary, #portfolio {
+        background-color: #303030;
+        color: white;
+    }
+
+    #skills, #resume {
+        background-color: transparent;
+        color: #303030;
+    }
+
+    #skills:hover, #resume:hover {
+        background-color: transparent;
+        color: #303030;
+    }
+    #nav-bar {
+        overflow: hidden;
+        width: 0;
+        transition: width 0.5s; /* Adjust the transition duration */
+    }
+    
+    #nav-list.show-nav {
+        display: flex;
+        width: 200px; /* Adjust the width based on your design */
+    }
+    #nav-win{
+        display: none;
+    }
+    input,textarea {
+        min-width: 50px !important;
+        width: 100px ;
+    }
+}

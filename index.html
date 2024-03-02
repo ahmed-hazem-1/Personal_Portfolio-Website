@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Hazem Elabady - Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./images/badge_FILL0_wght400_GRAD0_opsz24.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./javascript.js" defer></script>
+</head>
+
+<body>
+    <div id="menu-icon">&#9776;</div>
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Header Section -->
+    <header>
+        <!-- Profile Title -->
+        <h1>Personal Portfolio</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main id="mainContent">
+        <div id="start" class="start">
+            <!-- Name Section -->
+            <div class="name" id="typingText"></div>
+            <p>A Frontend Developer</p>
+            <nav id="nav-win">
+                <ul>
+                    <li><a href="#summary">Summary</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Summary Section -->
+        <section id="summary">
+            <div class="text">
+                <h2>Summary</h2>
+                <p class="me">Hello, I'm Ahmed Hazem, a dedicated Front-End Developer with a passion for creating engaging and responsive web experiences. Currently pursuing a degree in Computer Science and Artificial Intelligence at BFCAI College, I bring a unique blend of technical skills and creative thinking to every project.</p>
+            </div>
+            <div class="bfcai"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Front-End Development</h3>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>User Experience (UX) Design</li>
+                <li>User Interface (UI) Design</li>
+                <li>Web Development</li>
+                <p>There will be more in the future....(^_^)</p>
+            </ul>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <!-- Showcase your projects here -->
+            <!-- Education Section -->
+            <section id="education">
+                <h4>Education</h4>
+                <ul>
+                    <li>Benha University - Student, Computer Science and Artificial Intelligence</li>
+                    <li>Ahmed Zewail Language School</li>
+                    <li>Oct 2023 – Apr 2027</li>
+                </ul>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h4>Licenses & Certifications</h4>
+                <ul>
+                    <li>Python Programming Basics - MaharaTech - ITIMooca (Issued Feb 2024 - Credential ID: 2R0KLm23n1 )</li>
+                    <li>Frontend Basics (HTML, CSS) - GDSC Benha University(Issued Feb 2024 )</li>
+                    <li>MaharaTech Certificate for Full course of HTML and CSS - MaharaTech - ITIMooca (Issued Mar 2024 -Credential ID: AdV4PhbK8c )</li>
+                </ul>
+            </section>
+
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <h2>Resume/CV</h2>
+            <button id="downloadPdf">Download PDF</button>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <form class="contact">
+                <h2>Contact</h2>
+                <div class="sec">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="sec">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="sec">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="sec">
+                    <button class="send" type="button" value="Send" onclick="sendEmail()">Send</button>
+                </div>
+            </form>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/ahmed-hazem-9a904924b/" target="_blank"><img src="./images/linkedin-svgrepo-com.svg" alt=""></a>
+                <a href="https://github.com/ahmed-hazem-1/" target="_blank"><img src="./images/github-142-svgrepo-com.svg" alt=""></a>
+                <a href="https://www.frontendmentor.io/profile/ahmed-hazem-1" target="_blank"><img src="./images/frontendmentor-svgrepo-com.svg" alt=""></a>
+            </div>
+        </section>
+    </main>
+
+    <a href="#start" class="up"></a>
+
+    
+
+    <!-- Include the correct version of html2pdf library -->
+    <script src="./html2pdf.bundle.js"></script>
+    <!-- Include the separate JavaScript file -->
+    <script src="./downloadPdf.js"></script>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navBar = document.getElementById('nav-bar');
+
+        menuIcon.addEventListener('click', () => {
+            navBar.classList.toggle('active');
+        });
+    </script>
+    <!-- Footer Section -->
+    <footer>
+        <!-- Testimonials, Blog, Social Media links, etc. can be added here -->
+        <p>&copy; 2024 Ahmed Hazem. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
